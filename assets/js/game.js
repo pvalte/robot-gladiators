@@ -14,10 +14,29 @@ var fight = function() {
   enemyHealth = enemyHealth - playerAttack;
   console.log(playerName + " attacks " + enemyName);
   console.log(enemyName + "'s health is " + enemyHealth);
+  // check enemy's health
+  if (enemyHealth <= 0) {
+    window.alert(enemyName + " has died!");
+  } 
+  else {
+    window.alert(enemyName + " still has " + enemyHealth + " health left.");
+  }
 
   console.log(enemyName + " attacks " + playerName);
   playerHealth = playerHealth - enemyAttack;
   console.log(playerName + "'s health is " + playerHealth);
+
+  // check player's health
+  if (playerHealth <= 0) {
+    window.alert(playerName + " has died!");
+  } 
+  else {
+    window.alert(playerName + " still has " + playerHealth + " health left.");
+  }
 };
 
 fight();
+// check to see if the value of the playerHealth variable is greater than 0
+if (playerHealth > 0) {
+    console.log("Your player is still alive!");
+}
