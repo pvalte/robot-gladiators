@@ -31,7 +31,7 @@ var fight = function (enemyName) {
             // check enemy's health
             if (enemyHealth <= 0) {
                 window.alert(enemyName + " has died!");
-                break; //breaks out of while loop, stopping the battles
+                break; //if the enemy-robot's health is zero or less, exit from the fight loop.
             } else {
                 window.alert(enemyName + " still has " + enemyHealth + " health left.");
             }
@@ -45,6 +45,7 @@ var fight = function (enemyName) {
             // check player's health
             if (playerHealth <= 0) {
                 window.alert(playerName + " has died!");
+                break; //breaks out of fight loop after player dies
             } else {
                 window.alert(playerName + " still has " + playerHealth + " health left.");
             }
