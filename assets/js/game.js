@@ -97,7 +97,10 @@ var startGame = function () {
     playerAttack = 10;
     playerMoney = 10;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 97363c1c6114337725bbc3c8a52db094cd4cfcef
     for (var i = 0; i < enemyNames.length; i++) {
         if (playerHealth > 0) {
             // let player know what round they are in, remember that arrays start at 0 so it needs to have 1 added to it
@@ -204,6 +207,9 @@ var shop = function () {
     }
 };
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 97363c1c6114337725bbc3c8a52db094cd4cfcef
 // start the game when the page loads
 startGame();
