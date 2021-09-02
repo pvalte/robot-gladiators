@@ -140,6 +140,27 @@ var endGame = function () {
         window.alert("You've lost your robot in battle.");
     }
 
+    //When the game has ended and we've survived facing all the robots:
+    // Retrieve the current high score from localStorage
+    var highScore = localStorage.getItem("highScore");
+    highScore = highScore || 0; //if no high score, set to zero
+
+    // Compare the player-robot score with the current high score
+    // If the current high score is higher
+    if (highScore > playerInfo.money) {
+        // Send player the message that the player did not beat the high score
+        window.alert("You did not beat the high score.");
+    }
+    // If the player score is higher
+    else {
+        // Set new high score object into localStorage
+        localStorage.setItem("highScore", playerInfo.money);
+        // Set new player-robot's name object into localStorage
+        localStorage.setItem("highScorePlayer", playerInfo.name);
+        // Send player the message that they beat the high score
+        window.alert("WOOHOO! You beat the high score!");
+    }
+    
     // ask player if they'd like to play again
     var playAgainConfirm = window.confirm("Would you like to play again?");
 
